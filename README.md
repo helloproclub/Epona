@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to Run
+- install Ruby (atleast v2.0)
+- install Rails (v5 or latest)
+- run command below
+```
+$ bundle install
+$ rails db:migrade
+$ rails server
+```
+- the application will be run on port 3000
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Post
+### /users
+```json
+body: {
+    "username": username,
+    "name": name,
+    "password": password,
+    "password_confirmation: password,
+    "email": email,
+}
+```
+### /auth/login
+request:
+``` json
+body: {
+    "email": username,
+    "password": password,
+}
+```
+## Get
+### /users/
+``` json
+header: {
+    "Authorization": _token_
+}
+```
