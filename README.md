@@ -26,7 +26,7 @@ body: {
 request:
 ``` json
 body: {
-    "email": username,
+    "email": email,
     "password": password,
 }
 ```
